@@ -7,9 +7,9 @@ __author__ = 'hangvirus'
 
 class Turnos(Base):
     id = columns.UUID(primary_key=True, default=uuid.uuid4)
-    nro_turno = columns.Text(default='A1')
-    fecha = columns.Date()
-    hora = columns.Time()
+    nro_turno = columns.Text(default='AAA')
+    fecha = columns.Text()
+    hora = columns.Text()
     medico_cin = columns.Text()
     persona_cin = columns.Text()
     estado = columns.Boolean(default=True)
@@ -21,6 +21,6 @@ class Turnos(Base):
             'fecha': self.fecha,
             'hora': self.hora,
             'medico': self.medico_cin,
-            'persona': self.persona_cin,
+            'persona_cin': self.persona_cin,
             'estado': self.estado
         }

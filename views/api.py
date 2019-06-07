@@ -98,8 +98,8 @@ def get_all_especialidad():
 @json_api
 def add_turnos():
     # data = json.loads(flask.request.data)
-    turno = Turnos.create(nro_turno=request.form["nro_turno"], fecha=request.form["fecha"], hora=request.form['hora'],
-                           medico=request.form['medico'], persona=request.form['persona'], estado_turnos=request.form['estado_turnos'])
+    turno = Turnos.create(fecha=request.form["fecha"], hora=request.form['hora'],
+                           medico=request.form['medico_cin'], persona=request.form['persona_cin'])
     turno.save()
     return turno.get_data()
 
