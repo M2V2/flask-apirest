@@ -20,7 +20,7 @@ class Turnos(Base):
             'nro_turno': self.nro_turno,
             'fecha': self.fecha,
             'hora': self.hora,
-            'medico': self.medico_cin,
+            'medico_cin': self.medico_cin,
             'persona_cin': self.persona_cin,
             'estado': self.estado
         }
